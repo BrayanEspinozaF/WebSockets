@@ -1,0 +1,26 @@
+{
+  "name": "sockets",
+  "version": "1.0.0",
+  "description": "practica 2 de la unidad 3 de programacion web 2 sobre la arquitectura sockets",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BrayanEspinozaF/WebSockets.git"
+  },
+  "keywords": [
+    "sockets"
+  ],
+  "author": "Brayan Espinoza Fernandez",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/BrayanEspinozaF/WebSockets/issues"
+  },
+  "homepage": "https://github.com/BrayanEspinozaF/WebSockets#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "socket.io": "^4.1.2"
+  }
+}
