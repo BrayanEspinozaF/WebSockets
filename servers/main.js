@@ -10,7 +10,13 @@ app.get('/', function(req, res){
 });
 
 io.on('connection', function(socket) {
-    console.log('alguin se ha conectado con socekt')
+    console.log('Alguien se ha conectado con socket')
+    //aqui se controlan los eventos del cliente mediante sockets
+    socket.emit('messages', {
+        id: 1,
+        texto: 'Hola soy un mensaje',
+        autor: 'Brayan Espinoza Fernandez'
+    });
 });
 
 server.listen(3002, function(){
