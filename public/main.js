@@ -5,3 +5,16 @@ var socket = io.connect(`http://localhost:3002`, {'forceNew':true});
 socket.on('messages', function(data){
     console.log(data);
 });
+
+//template para imprimir el contenido
+function render(data){
+        //se inicia el manejo de strings que viene en ES6 se usan las comillas ``
+        //la variable se colocan con el signo $ y entre {}
+
+var html = `<div>
+                <strong>${data.autor}</strong>:
+                <em>${data.texto}</em>
+            </div>`;
+
+            document.getElementById('messages').innerHTML = html;
+}
