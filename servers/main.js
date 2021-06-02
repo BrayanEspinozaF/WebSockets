@@ -21,7 +21,8 @@ io.on('connection', function(socket) {
     socket.emit('messages', messages);
     //aqui se escuchan los nuevos mesajes mandados por el cliente
     socket.on('new-message', function(data){
-
+        //la variable messages tendra todos los elementos que vayan llegando
+        messages.push(data);
     });
 });
 
