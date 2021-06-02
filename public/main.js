@@ -12,10 +12,13 @@ function render(data){
         //se inicia el manejo de strings que viene en ES6 se usan las comillas ``
         //la variable se colocan con el signo $ y entre {}
 
-var html = `<div>
-                <strong>${data.autor}</strong>:
-                <em>${data.texto}</em>
-            </div>`;
+        //se restructura  para manejar el array con map
+var html = data.map(function(elem, index){
+    return( `<div>
+                <strong>${elem.autor}</strong>:
+                <em>${elem.texto}</em>
+            </div>`);
+        }).join(" ");
 
             document.getElementById('messages').innerHTML = html;
 }
