@@ -13,5 +13,13 @@
     <h1>Mi APLICACION con sockets</h1>
     <!-- se muestra el mensaje como un chat -->
     <div id="messages"></div>
+    <br>
+
+    <!-- formulario para mandar mensajes -->]
+    <form onsubmit="return addMessages(this)">
+        <input type="text" id="username" placeholder="Tu nombre">
+        <input type="text" id="texto" placeholder="cuentanos algo">
+        <input type="submit" value="Enviar">
+    </form>
 </body>
 </html>
