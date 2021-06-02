@@ -26,8 +26,8 @@ var html = data.map(function(elem, index){
 // funcion para agregar mensajes 
 function addMessages(e){
     var playload = {
-        autor: document.getElementById(username).value,
-        texto: document.getElementById(texto).value
+        autor: document.getElementById('username').value,
+        texto: document.getElementById('texto').value
     };
     socket.emit('new-message', playload);
     return false;
