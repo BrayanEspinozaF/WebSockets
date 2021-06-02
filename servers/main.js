@@ -3,6 +3,12 @@ var app = express();
 var server = require('http').Server(app);
 var io = require('socket.io')(server);
 
+var messages = [{
+    id: 1,
+    texto: 'Hola soy un mensaje',
+    autor: 'Brayan Espinoza'
+}];
+
 app.use(express.static('public'));
 
 app.get('/', function(req, res){
@@ -10,12 +16,12 @@ app.get('/', function(req, res){
 });
 
 io.on('connection', function(socket) {
-    console.log('Alguien se ha conectado con socket')
+    console.log('Alguien se ha conectado con socket');
     //aqui se controlan los eventos del cliente mediante sockets
-    socket.emit('messages', {
-        id: 1,
-        texto: 'Hola soy un mensaje',
-        autor: 'Brayan Espinoza Fernandez'
+    socket.emit('messages', messages);
+    //aqui se escuchan los nuevos mesajes mandados por el cliente
+    socket.on('new-message', function(data){
+
     });
 });
 
